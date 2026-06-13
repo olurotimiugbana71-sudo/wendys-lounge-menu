@@ -3,528 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wendy's Lounge - Premium Drinks & Dining Menu">
-    <title>Wendy's Lounge | Menu</title>
+    <meta name="description" content="Wendy's Lounge - Food & Drink Menu. We care for you.">
+    <title>Wendy's Lounge | Food & Drink Menu</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="menu-container">
-        <!-- Header Section -->
+        
+        <!-- HEADER -->
         <header class="menu-header">
+            <div class="header-overlay"></div>
             <div class="logo-container">
-                <!-- Your Logo - Will try to load logo.jpg first -->
-                <img src="logo.jpg" 
-                     alt="Wendy's Lounge" 
-                     class="logo" 
-                     id="mainLogo"
+                <img src="logo.jpg" alt="Wendy's Lounge Logo" class="logo" id="mainLogo"
                      onerror="document.getElementById('logoFallback').style.display='flex'; this.style.display='none';">
-                
-                <!-- Fallback - Only shows if logo fails to load -->
                 <div class="logo-fallback" id="logoFallback" style="display: none;">
                     <span class="logo-initial">W</span>
                 </div>
             </div>
             <h1 class="lounge-name">Wendy's Lounge</h1>
-            <p class="tagline">Where Elegance Meets Flavor</p>
-            <div class="header-divider"></div>
+            <div class="golden-line"></div>
+            <p class="tagline">Food &amp; Drink Menu</p>
+            <p class="motto">...we care for you</p>
+            <a href="wendys-menu.pdf" class="pdf-download-btn" download>
+                📄 Download Full Menu (PDF)
+            </a>
         </header>
-        <!-- Specials Banner -->
-        <section class="specials-section">
-            <div class="specials-badge">🎉 Today's Specials</div>
-            <div class="specials-carousel" id="specialsCarousel">
-                <div class="special-item">
-                    <span class="special-name">Happy Hour Cocktails</span>
-                    <span class="special-price">₦8,500 / $5.50</span>
-                    <span class="special-time">5PM - 7PM Daily</span>
-                </div>
-                <div class="special-item">
-                    <span class="special-name">2-for-1 Mocktails</span>
-                    <span class="special-time">All Day Tuesday</span>
-                </div>
-                <div class="special-item">
-                    <span class="special-name">Ladies' Night Special</span>
-                    <span class="special-price">50% Off Selected Drinks</span>
-                    <span class="special-time">Every Thursday</span>
-                </div>
-            </div>
-        </section>
 
-        <!-- Menu Categories Navigation -->
+        <!-- CATEGORY NAVIGATION -->
         <nav class="category-nav" id="categoryNav">
-            <button class="category-btn active" data-category="all">All Menu</button>
-            <button class="category-btn" data-category="cocktails">🍸 Cocktails</button>
-            <button class="category-btn" data-category="beers">🍺 Beers</button>
-            <button class="category-btn" data-category="wines">🍷 Wines</button>
-            <button class="category-btn" data-category="spirits">🥃 Spirits</button>
-            <button class="category-btn" data-category="nonalcoholic">🍹 Non-Alcoholic</button>
-            <button class="category-btn" data-category="food">🍗 Food</button>
+            <button class="category-btn active" data-category="all">🍽️ All Menu</button>
+            <button class="category-btn" data-category="delicacies">🍛 Delicacies</button>
+            <button class="category-btn" data-category="platters">🍝 Platters & Sides</button>
+            <button class="category-btn" data-category="specials">⭐ Kitchen Specials</button>
+            <button class="category-btn" data-category="shawarma">🌯 Shawarma</button>
+            <button class="category-btn" data-category="grills">🔥 BBQ Grills & Peppersoup</button>
+            <button class="category-btn" data-category="beers">🍺 Beers & Soft Drinks</button>
+            <button class="category-btn" data-category="wines">🍷 Exotic Wines & Spirits</button>
         </nav>
 
-        <!-- Cocktails Section -->
-        <section class="menu-section" data-category="cocktails">
-            <h2 class="section-title">🍸 Premium Cocktails</h2>
+        <!-- DELICIOUS DELICACIES -->
+        <section class="menu-section" data-category="delicacies">
+            <h2 class="section-title">🍛 Delicious Delicacies</h2>
             <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Classic Mojito</h3>
-                        <p class="item-description">Fresh mint, lime, rum, soda water</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦18,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$12.99</span>
-                    </div>
-                    <span class="popular-tag">Popular</span>
-                </div>
-                
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Strawberry Daiquiri</h3>
-                        <p class="item-description">Fresh strawberries, rum, lime, sugar</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦19,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$13.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item featured">
-                    <div class="item-info">
-                        <h3 class="item-name">Long Island Iced Tea</h3>
-                        <p class="item-description">Vodka, rum, gin, tequila, triple sec, cola</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦21,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$14.99</span>
-                    </div>
-                    <span class="featured-tag">★ Premium</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Piña Colada</h3>
-                        <p class="item-description">Rum, coconut cream, pineapple juice</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦18,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$12.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Margarita Classic</h3>
-                        <p class="item-description">Tequila, triple sec, fresh lime juice</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦17,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$11.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Blue Lagoon</h3>
-                        <p class="item-description">Vodka, blue curaçao, lemonade</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦19,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$13.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item new-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Passion Fruit Martini</h3>
-                        <p class="item-description">Vanilla vodka, passion fruit, lime, prosecco</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦21,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$14.99</span>
-                    </div>
-                    <span class="new-tag">New</span>
-                </div>
+                <div class="menu-item"><div class="item-info"><h3>Jollof Rice With Turkey</h3></div><div class="item-pricing"><span class="price-ngn">₦6,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jollof Rice With Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦5,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jollof Rice With Beef</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fried Rice With Turkey</h3></div><div class="item-pricing"><span class="price-ngn">₦6,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fried Rice With Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦5,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fried Rice With Beef</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Semo, Egusi Soup With Turkey</h3></div><div class="item-pricing"><span class="price-ngn">₦6,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Semo, Egusi Soup With Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦5,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Semo, Egusi Soup With Beef</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Rice And Beans Combo With Turkey</h3></div><div class="item-pricing"><span class="price-ngn">₦6,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Rice And Beans Combo With Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦5,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Rice And Beans Combo With Assorted</h3></div><div class="item-pricing"><span class="price-ngn">₦6,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Plantain And Egg Frittata</h3></div><div class="item-pricing"><span class="price-ngn">₦5,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Salad</h3></div><div class="item-pricing"><span class="price-ngn">₦500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fried Plantain</h3></div><div class="item-pricing"><span class="price-ngn">₦500</span></div></div>
+            </div>
+            <div class="soups-note">
+                <h4>🥣 Soups Available</h4>
+                <p>Ogbono &nbsp;|&nbsp; Banga &nbsp;|&nbsp; Oha &nbsp;|&nbsp; Vegetable &nbsp;|&nbsp; Okro</p>
             </div>
         </section>
 
-        <!-- Beers Section -->
+        <!-- PLATTERS & SIDES -->
+        <section class="menu-section" data-category="platters">
+            <h2 class="section-title">🍝 Platters &amp; Sides</h2>
+            <div class="menu-grid">
+                <div class="menu-item"><div class="item-info"><h3>Indomie Table and Egg</h3><p>With fish - ₦3,000</p></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Indomie Chikki and Egg</h3><p>With fish - ₦2,500</p></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Spaghetti, Small Turkey & Plantain/Sausage</h3></div><div class="item-pricing"><span class="price-ngn">₦5,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Spaghetti, Big Turkey & Plantain/Hotdog</h3></div><div class="item-pricing"><span class="price-ngn">₦6,000 / ₦7,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Spaghetti and Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦3,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Spaghetti & Chicken with Plantain/Hotdog</h3></div><div class="item-pricing"><span class="price-ngn">₦4,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Yam and Egg Sauce</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Plantain and Egg</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Bread and Two Eggs</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500 / ₦1,600</span></div></div>
+            </div>
+        </section>
+
+        <!-- KITCHEN SPECIALS -->
+        <section class="menu-section" data-category="specials">
+            <h2 class="section-title">⭐ Kitchen Specials</h2>
+            <div class="menu-grid">
+                <div class="menu-item featured"><div class="item-info"><h3>Crocker Fish</h3><p>With take out - ₦8,500</p></div><div class="item-pricing"><span class="price-ngn">₦8,000</span></div><span class="featured-tag">★ Special</span></div>
+                <div class="menu-item"><div class="item-info"><h3>Catfish</h3><p>With take out - ₦6,500</p></div><div class="item-pricing"><span class="price-ngn">₦6,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Cowtail</h3><p>With take out - ₦2,500</p></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Turkey</h3><p>With take out - ₦5,500</p></div><div class="item-pricing"><span class="price-ngn">₦5,000</span></div></div>
+            </div>
+        </section>
+
+        <!-- SHAWARMA -->
+        <section class="menu-section" data-category="shawarma">
+            <h2 class="section-title">🌯 Shawarma</h2>
+            <div class="menu-grid">
+                <div class="menu-item"><div class="item-info"><h3>1 Sausage & Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>2 Sausage & Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>2 Sausage & Extra Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>3 Sausage & Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦4,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>4 Sausage & Extra Chicken</h3></div><div class="item-pricing"><span class="price-ngn">₦5,000</span></div></div>
+            </div>
+        </section>
+
+        <!-- BBQ GRILLS & PEPPERSOUP -->
+        <section class="menu-section" data-category="grills">
+            <h2 class="section-title">🔥 Barbecue Grills &amp; Peppersoup</h2>
+            <div class="menu-grid">
+                <div class="menu-item featured"><div class="item-info"><h3>Croaker Fish</h3></div><div class="item-pricing"><span class="price-ngn">₦10,000 / ₦12,000</span></div><span class="featured-tag">★ Popular</span></div>
+                <div class="menu-item"><div class="item-info"><h3>Barbecue Catfish/Chips</h3></div><div class="item-pricing"><span class="price-ngn">₦5,000 / ₦6,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Chicken And Chips</h3></div><div class="item-pricing"><span class="price-ngn">₦5,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Snail & Chips</h3></div><div class="item-pricing"><span class="price-ngn">₦5,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Goat Meat Pepper Soup</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Nkwobi</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Asun</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Spicy Gizzard</h3></div><div class="item-pricing"><span class="price-ngn">₦3,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Boli And Fish</h3></div><div class="item-pricing"><span class="price-ngn">₦4,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Suya</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+            </div>
+        </section>
+
+        <!-- BEERS & SOFT DRINKS -->
         <section class="menu-section" data-category="beers">
-            <h2 class="section-title">🍺 Beers & Ciders</h2>
+            <h2 class="section-title">🍺 Beers &amp; Soft Drinks</h2>
             <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Heineken</h3>
-                        <p class="item-description">Premium Dutch lager, 330ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦10,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$6.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Corona Extra</h3>
-                        <p class="item-description">Mexican pale lager with lime, 330ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦11,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$7.49</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Guinness Stout</h3>
-                        <p class="item-description">Rich Irish dry stout, 440ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦12,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$8.99</span>
-                    </div>
-                    <span class="popular-tag">Popular</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Budweiser</h3>
-                        <p class="item-description">American-style lager, 330ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦9,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$5.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Strongbow Cider</h3>
-                        <p class="item-description">Refreshing apple cider, 330ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦11,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$7.99</span>
-                    </div>
-                </div>
+                <div class="menu-item"><div class="item-info"><h3>Heineken</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big/Stout</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big/Ice</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Desperado</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Origin Beer</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Budweiser</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Turbo King</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Gulder</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Trophy</h3></div><div class="item-pricing"><span class="price-ngn">₦1,300</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Trophy Stout</h3></div><div class="item-pricing"><span class="price-ngn">₦1,300</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Goldberg</h3></div><div class="item-pricing"><span class="price-ngn">₦1,300</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>33</h3></div><div class="item-pricing"><span class="price-ngn">₦1,300</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Castle Lite</h3></div><div class="item-pricing"><span class="price-ngn">₦1,300</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Small Stout</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>S/Ice (Small)</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>N Star Radler</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Malt</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fayrouz</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fly Fish</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Coke</h3></div><div class="item-pricing"><span class="price-ngn">₦1,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Pepsi</h3></div><div class="item-pricing"><span class="price-ngn">₦700</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Baby Oku</h3></div><div class="item-pricing"><span class="price-ngn">₦600</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Coco Samba</h3></div><div class="item-pricing"><span class="price-ngn">₦600</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Water</h3></div><div class="item-pricing"><span class="price-ngn">₦500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Super Komando</h3></div><div class="item-pricing"><span class="price-ngn">₦500</span></div></div>
             </div>
         </section>
 
-        <!-- Wines Section -->
+        <!-- EXOTIC WINES & SPIRITS -->
         <section class="menu-section" data-category="wines">
-            <h2 class="section-title">🍷 Fine Wines</h2>
+            <h2 class="section-title">🍷 Exotic Wines &amp; Spirits</h2>
             <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Cabernet Sauvignon</h3>
-                        <p class="item-description">Full-bodied red, glass</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦15,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$9.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Merlot</h3>
-                        <p class="item-description">Smooth medium-bodied red, glass</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦15,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$9.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item featured">
-                    <div class="item-info">
-                        <h3 class="item-name">Chardonnay</h3>
-                        <p class="item-description">Elegant white wine, glass</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦13,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$8.99</span>
-                    </div>
-                    <span class="featured-tag">★ House Favorite</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Prosecco</h3>
-                        <p class="item-description">Italian sparkling wine, bottle</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦52,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$34.99</span>
-                    </div>
-                </div>
+                <div class="menu-item premium-item"><div class="item-info"><h3>Belaire</h3></div><div class="item-pricing"><span class="price-ngn">₦65,000</span></div><span class="premium-tag">👑 Premium</span></div>
+                <div class="menu-item premium-item"><div class="item-info"><h3>Hennessy</h3></div><div class="item-pricing"><span class="price-ngn">₦65,000</span></div><span class="premium-tag">👑 Premium</span></div>
+                <div class="menu-item"><div class="item-info"><h3>Martel6</h3></div><div class="item-pricing"><span class="price-ngn">₦60,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jack Daniel</h3></div><div class="item-pricing"><span class="price-ngn">₦40,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big Campari</h3></div><div class="item-pricing"><span class="price-ngn">₦35,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jameson</h3></div><div class="item-pricing"><span class="price-ngn">₦35,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Bailey</h3></div><div class="item-pricing"><span class="price-ngn">₦30,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Red Label</h3></div><div class="item-pricing"><span class="price-ngn">₦30,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>William Law</h3></div><div class="item-pricing"><span class="price-ngn">₦25,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Sierra</h3></div><div class="item-pricing"><span class="price-ngn">₦25,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Bacardi</h3></div><div class="item-pricing"><span class="price-ngn">₦25,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Andre</h3></div><div class="item-pricing"><span class="price-ngn">₦20,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Four Cousin</h3></div><div class="item-pricing"><span class="price-ngn">₦15,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big Vodka</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Baron</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big Imperial</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big Cream</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>4th Street</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Big Whiskey</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jack William</h3></div><div class="item-pricing"><span class="price-ngn">₦12,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Small Campari</h3></div><div class="item-pricing"><span class="price-ngn">₦9,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Origin Bottle</h3></div><div class="item-pricing"><span class="price-ngn">₦8,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Hollandia</h3></div><div class="item-pricing"><span class="price-ngn">₦3,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Bullet</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Monster</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Redbull</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Active</h3></div><div class="item-pricing"><span class="price-ngn">₦2,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>5-Alive</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Small Cream</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Small Whiskey</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Power-Horse</h3></div><div class="item-pricing"><span class="price-ngn">₦2,000</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Long Jack</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Origin Pet</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Action Bottle</h3></div><div class="item-pricing"><span class="price-ngn">₦1,500</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Climax</h3></div><div class="item-pricing"><span class="price-ngn">₦1,200</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Fearless</h3></div><div class="item-pricing"><span class="price-ngn">₦800</span></div></div>
+                <div class="menu-item"><div class="item-info"><h3>Jekonmo</h3></div><div class="item-pricing"><span class="price-ngn">₦600</span></div></div>
             </div>
         </section>
 
-        <!-- Spirits Section -->
-        <section class="menu-section" data-category="spirits">
-            <h2 class="section-title">🥃 Premium Spirits</h2>
-            <div class="menu-grid">
-                <div class="menu-item featured">
-                    <div class="item-info">
-                        <h3 class="item-name">Johnnie Walker Black</h3>
-                        <p class="item-description">12-year-old blended Scotch whisky</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦16,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$10.99</span>
-                    </div>
-                    <span class="featured-tag">★ Best Seller</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Jack Daniel's</h3>
-                        <p class="item-description">Tennessee whiskey, smooth charcoal filtered</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦14,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$9.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item premium-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Hennessy VS</h3>
-                        <p class="item-description">Fine French cognac, aged to perfection</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦24,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$15.99</span>
-                    </div>
-                    <span class="premium-tag">👑 Luxury</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Smirnoff Vodka</h3>
-                        <p class="item-description">Triple distilled, exceptionally smooth</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦13,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$8.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Captain Morgan</h3>
-                        <p class="item-description">Original spiced gold rum</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦14,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$9.49</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Non-Alcoholic Section -->
-        <section class="menu-section" data-category="nonalcoholic">
-            <h2 class="section-title">🍹 Non-Alcoholic Refreshments</h2>
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Virgin Mojito</h3>
-                        <p class="item-description">Fresh mint, lime, soda, sugar</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦12,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$7.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Fresh Orange Juice</h3>
-                        <p class="item-description">Freshly squeezed seasonal oranges</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦9,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$5.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item new-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Berry Smoothie</h3>
-                        <p class="item-description">Mixed berries, banana, yogurt</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦13,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$8.99</span>
-                    </div>
-                    <span class="new-tag">New</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Soft Drinks</h3>
-                        <p class="item-description">Coke, Sprite, Fanta, Schweppes</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦6,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$3.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Bottled Water</h3>
-                        <p class="item-description">Premium mineral water, 750ml</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦3,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$2.49</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Food Section -->
-        <section class="menu-section" data-category="food">
-            <h2 class="section-title">🍗 Delicious Bites</h2>
-            <div class="menu-grid">
-                <div class="menu-item popular-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Chicken Wings (6pc)</h3>
-                        <p class="item-description">BBQ, spicy buffalo, or honey garlic</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦18,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$11.99</span>
-                    </div>
-                    <span class="popular-tag">Popular</span>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Beef Burger</h3>
-                        <p class="item-description">200g Angus beef, cheese, fries</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦22,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$14.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Club Sandwich</h3>
-                        <p class="item-description">Triple-decker with chicken, bacon, egg</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦19,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$12.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-info">
-                        <h3 class="item-name">French Fries</h3>
-                        <p class="item-description">Crispy golden fries with dips</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦10,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$6.99</span>
-                    </div>
-                </div>
-
-                <div class="menu-item featured">
-                    <div class="item-info">
-                        <h3 class="item-name">Nachos Supreme</h3>
-                        <p class="item-description">Loaded with beef, cheese, jalapeños</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦21,000</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$13.99</span>
-                    </div>
-                    <span class="featured-tag">★ Chef's Special</span>
-                </div>
-
-                <div class="menu-item premium-item">
-                    <div class="item-info">
-                        <h3 class="item-name">Mixed Grill Platter</h3>
-                        <p class="item-description">Steak, chicken, prawns, sausages</p>
-                    </div>
-                    <div class="item-pricing">
-                        <span class="price-ngn">₦37,500</span>
-                        <span class="price-divider">|</span>
-                        <span class="price-usd">$24.99</span>
-                    </div>
-                    <span class="premium-tag">👑 Sharing Platter</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer with Contact Info -->
+        <!-- STUNNING FOOTER -->
         <footer class="menu-footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>📍 Visit Us</h3>
-                    <p>123 Victoria Island, Lagos, Nigeria</p>
-                </div>
-                <div class="footer-section">
-                    <h3>📞 Contact</h3>
-                    <p>+234 800 123 4567</p>
-                    <p>+234 800 987 6543</p>
-                </div>
-                <div class="footer-section">
-                    <h3>🕐 Opening Hours</h3>
-                    <p>Mon-Thu: 4PM - 2AM</p>
-                    <p>Fri-Sat: 4PM - 4AM</p>
-                    <p>Sun: 2PM - 12AM</p>
-                </div>
-                <div class="footer-section">
-                    <h3>🔗 Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Twitter</a>
+            <div class="footer-top">
+                <div class="footer-glow"></div>
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <div class="footer-icon">📍</div>
+                        <h3>Find Us</h3>
+                        <p>72, Obafemi Awolowo Road</p>
+                        <p>Erunwen Junction, Ikorodu</p>
+                        <p class="footer-landmark">Beside NNPC Petrol Station</p>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-icon">📞</div>
+                        <h3>Call Us</h3>
+                        <p><a href="tel:09131606598">09131606598</a></p>
+                        <p><a href="tel:08054137102">08054137102</a></p>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-icon">🕐</div>
+                        <h3>Opening Hours</h3>
+                        <p>Mon - Thu: 4PM - 2AM</p>
+                        <p>Fri - Sat: 4PM - 4AM</p>
+                        <p>Sun: 2PM - 12AM</p>
+                    </div>
+                    <div class="footer-col">
+                        <div class="footer-icon">📄</div>
+                        <h3>Download Menu</h3>
+                        <a href="wendys-menu.pdf" class="footer-pdf-btn" download>
+                            📥 PDF Menu
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Wendy's Lounge. All rights reserved.</p>
-                <p class="prices-note">Prices inclusive of VAT | Subject to change</p>
+                <div class="footer-divider"></div>
+                <p class="copyright">&copy; 2026 Wendy's Lounge. All rights reserved.</p>
+                <p class="footer-motto">...we care for you</p>
             </div>
         </footer>
+
     </div>
 
     <script src="script.js"></script>
