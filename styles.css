@@ -507,3 +507,52 @@ body {
         border: 1px solid #ddd;
     }
 }
+/* PAYMENT INFO */
+.payment-info {
+    background: linear-gradient(135deg, rgba(212,168,83,0.1), rgba(212,168,83,0.05));
+    border: 1px solid rgba(212,168,83,0.3);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.payment-title {
+    color: var(--gold);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.payment-text {
+    color: rgba(255,255,255,0.8);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.payment-bank {
+    color: var(--gold-light);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.payment-account {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.payment-account strong {
+    color: var(--gold);
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.payment-name {
+    color: rgba(255,255,255,0.6);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
